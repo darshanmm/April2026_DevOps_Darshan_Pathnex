@@ -1,0 +1,10 @@
+## Today's tasks (5th  April 2026)
+#2 hours video repeat
+#1 hour setup ec2 with aws
+#2 reading linux faqs, linux commands
+#1 hour reading of basics of linux and ubantu from pdf
+
+##Tomorrow's tasks (6th April 2026)
+#2 hours AWS Basics, networking basics for understanding 
+#1 hour Learn github commands and understand the setup
+#2 hours of bash scripting commands and reading and understanding sample code
