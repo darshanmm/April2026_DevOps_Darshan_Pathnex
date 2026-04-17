@@ -7,4 +7,4 @@
 #2 hours reading my notes based on the morning class 
 #1 hours of bash scripting basics
 #1 hours of reading the kuberenetes pdf file 
-#2 hours of devops part 2 video from the pathne!x
+#2 hours of devops part 2 video from the pathnex
