@@ -1,7 +1,7 @@
 ## Today's tasks (16th  April 2026)
 #1 hours video repeat
 #1 hour setup ec2 with aws
-#1 reading linux faqs, linux commands
+#1 reading linux faqs, linux commands 
 
 ##Tomorrow's tasks (17th April 2026)
 #2 hours reading my notes based on the morning class 

@@ -1,0 +1,34 @@
+#Maven Build
+## Jenkins Pipeline - Maven Build
+
+You will earn how to **compile, test and package a java project**
+
+
+	pipeline {
+		agent any
+		tools {
+			maven 'Maven-3.8.1'
+			jdk 'JDK-17'
+		}
+		stages {
+			stage('Checkout') {
+				steps {
+					gitl url: 'https://github.com/Pathnex/sample-java-app.git'
+				}
+			stage('Compile') {
+				steps {
+					sh 'mvn clean compile'
+				}
+			}
+			stage('Test') {
+				steps {
+					sh 'mvn test'
+				}
+			}
+			stage('Package') {
+				steps {
+					sh 'mvn package'
+				}
+			}
+		}
+	}

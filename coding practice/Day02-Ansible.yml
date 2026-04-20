@@ -1,0 +1,43 @@
+#Day 02 -Service & Tags
+## Ansible - Install & Enable Nginx
+
+---
+- name: install and start Nginx on Pathnex
+  hosts: all
+  become: yes
+  
+  tasks:
+    - name: Install Nginx
+      yum:
+        name: Nginx
+        state: present
+        
+    - name: Enable Nginx
+      service:
+        name: nginx
+        state: started
+        enabled: yes
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
