@@ -1,0 +1,9 @@
+## Today's tasks (4th  May 2026)
+#1 hours video repeat
+#1 hour setup ec2 with aws
+#1 reading linux faqs, linux commands and aws faqs 
+
+##Tomorrow's tasks (5th May 2026)
+#2 hours reading my notes aws faqs
+#1 hours of bash scripting basics
+#1 hours of reading the kuberenetes pdf file 

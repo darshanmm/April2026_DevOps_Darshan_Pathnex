@@ -1,0 +1,1 @@
+allowed_ssh_ip = "YOUR_IP/32"

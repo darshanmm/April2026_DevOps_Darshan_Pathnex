@@ -1,0 +1,13 @@
+## GitLab CI - Checkout Git Repository
+
+##You will learn how to **checkout a Git repository in GitLab CI**.
+
+stages:
+  - checkout
+
+  git-checkout:
+    stage: checkout
+    script:
+      - git clone https://github.com/Pathnex/sample-java-app.git
+      - cd sample-java-app
+      - ls -la
