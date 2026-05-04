@@ -1,0 +1,13 @@
+## Day-01 - Basics
+## Ansible Task - Insall nginx on Pathnex server. Rewrite the yml manually.
+
+---
+- name: Install nginx on Pathnex server
+  hosts: all
+  become: yes
+
+  tasks:
+    - name: Install nginx
+      yum:
+        name: nginx
+        state: present

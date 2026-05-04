@@ -1,0 +1,18 @@
+##Jenkins Pipeline - Checkout Git, you will learn how to checkout git repository and list files
+
+pipeline {
+    agent any
+    stages {
+        stage('Checkout') {
+            steps {
+                git branch: 'main',
+                url: 'https://github.com/Pathnex/sample-java-app.git'
+            }
+        }
+        stage('List Files') {
+            steps {
+                sh 'ls -la'
+            }
+        }
+    }
+}

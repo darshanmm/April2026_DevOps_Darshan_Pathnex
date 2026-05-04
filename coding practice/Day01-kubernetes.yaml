@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: pod
+metadata:
+  name: pathnex-pod
+
+spec:
+  containers:
+    - name: web
+      image: nginx:latest
+      ports:
+        - containerPort: 80

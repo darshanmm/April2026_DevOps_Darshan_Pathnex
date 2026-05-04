@@ -15,6 +15,7 @@ You will earn how to **compile, test and package a java project**
 				steps {
 					gitl url: 'https://github.com/Pathnex/sample-java-app.git'
 				}
+			}
 			stage('Compile') {
 				steps {
 					sh 'mvn clean compile'
