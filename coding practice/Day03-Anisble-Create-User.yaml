@@ -1,0 +1,11 @@
+##Ansible task: create a user
+---
+- name: Create a Pathnex server
+  hosts: all
+  become: yes
+
+  tasks:
+    - name: Create a user pathnex-admin
+      user:
+        name: pathnex-admin
+        shell: /bin/bash
