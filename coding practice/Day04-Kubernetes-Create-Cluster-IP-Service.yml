@@ -1,0 +1,11 @@
+## Kubernetes - create ClusterIP Service
+apiVersion: v1
+kind: Service
+metadata:
+  name: pathnex-service
+spec:
+  selector:
+    app: pathnex-app
+  ports:
+    - port: 80
+    - targetPort: 80

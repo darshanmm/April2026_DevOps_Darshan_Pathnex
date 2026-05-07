@@ -1,0 +1,18 @@
+##Ansible - Handler to restart nginx
+---
+- name: Manage Nginx
+  hosts: all
+  become: yes
+
+  tasks:
+    - name: Update config file
+      copy:
+        src: index.html
+        dest: /usr/share/nginx/html/index.html
+      notify: Restart nginx
+
+  handlers:
+    - name: Restart nginx
+      service:
+        name: nginx
+        state: restarted

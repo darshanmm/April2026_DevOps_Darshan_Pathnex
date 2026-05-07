@@ -1,0 +1,12 @@
+##Kubernetes - Add Environment Variables
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pathnex-env-pod
+spec:
+  containers:
+    - name: app
+      image: nginx
+      env:
+        - name: APP_ENV
+          value: "production"

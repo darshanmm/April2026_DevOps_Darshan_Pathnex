@@ -1,0 +1,25 @@
+##Parallel build
+## Jenkins pipeline - Parallel build and test, you will learn how to run parallel stages in Jenkins pipeline to run, buil and test in parralel
+pipeline {
+agent any
+stages {
+stage('Parallel Tasks') {
+parallel {
+stage('Build') {
+steps {
+echo 'Testing...'
+sh 'sleep 5' // Simulate test time
+sh 'mvn clean compile' // clear and compile the project
+}
+}
+stage('Test') {
+steps {
+echo 'Testing...'
+sh 'sleep 5' // Simulate test time
+sh 'mvn test' // run the tests
+}
+}
+}
+}
+}
+}

@@ -1,0 +1,13 @@
+##Ansible - Install Multiple Packages
+---
+- name: Install packages on Pathnex
+  hosts: all
+  become: yes
+
+  tasks:
+    - name: Install tools
+      yum:
+        name:
+          - git
+          - wget
+        state: present
