@@ -1,0 +1,14 @@
+##GitLab CI — Parameterized via Variables You will learn how to **use variables to parameterize GitLab jobs**.
+
+stages:
+  - deploy
+
+variables:
+  ENVIRONMENT: "dev"
+  INSTITUTE_NAME: "Pathnex"
+
+deploy:
+  stage: deploy
+  image: alpine:latest
+  script:
+    - echo "Deploying to ${ENVIRONMENT} by ${INSTITUTE_NAME}"

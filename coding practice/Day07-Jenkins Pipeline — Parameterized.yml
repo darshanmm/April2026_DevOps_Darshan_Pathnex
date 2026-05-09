@@ -1,0 +1,23 @@
+##Jenkins Pipeline — Parameterized - you will learn how to create a parameterized Jenkins pipeline that accepts user input and uses it in the build process.
+
+pipeline {
+    agent any
+    parameters {
+        string(name: 'ENVIRONMENT', defaultValue: 'dev', description: 'Development environment')
+      }
+    environment {
+        INSTITUTE_NAME = "Pathnex"
+    }
+    stages {
+        stage('Checkout') {
+            steps{
+              git url: 'https://github.com/pathnex/sample-java-app.git'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                sh "echo Deploying to ${ENVIRONMENT} by ${INSTITUTE_NAME}"
+              }
+        }
+    }
+}
