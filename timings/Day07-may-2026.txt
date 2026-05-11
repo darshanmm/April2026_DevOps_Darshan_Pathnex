@@ -1,0 +1,9 @@
+## Today's tasks (9th  May 2026)
+#1 hours video repeat
+#2 reading kuberenetes faqs, kuberenetes commands
+
+##Tomorrow's tasks (10th may 2026)
+#2 hours reading my notes based on the morning class 
+#1 hours of bash scripting basics
+#1 hours of reading the kuberenetes and ansible pdf file 
+#2 hours of devops part 2 video from the pathnex
