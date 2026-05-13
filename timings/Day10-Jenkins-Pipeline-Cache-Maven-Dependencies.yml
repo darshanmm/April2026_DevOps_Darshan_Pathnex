@@ -1,0 +1,27 @@
+## 🔹 Jenkins Pipeline — Cache Maven Dependencies
+## you will learn how to reuse dependecies to speedup builds
+
+pipeline {
+    agent any
+    environment {
+        INSTITUTE_NAME = "Pathnex"
+    }
+    stages {
+        stage('Checkout') {
+            steps {
+              git url: 'https://github.com/pathnex/sample-java-app.git'
+            }
+          }
+        stage('Build') {
+            steps {
+              sh '''
+              if [-d ".m2"]; then
+                echo "Using cached dependencies"
+              else
+                mvn clean compile
+              fi
+              '''
+            }
+        }
+    }
+}
