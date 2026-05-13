@@ -1,0 +1,28 @@
+##Kubernetes — Add Liveness & Readiness Probes
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pathnex-probe-pod
+spec:
+  containers:
+    - name: web
+      image: nginx
+      startupProbe:
+        httpGet:
+          path: /
+          port: 80
+        failureThreshold: 30
+        periodSeconds: 10
+      livenessProbe:
+        httpGet:
+          path: /
+          port: 80
+        initialDelaySeconds: 5
+        periodSeconds: 5
+      readinessProbe:
+        httpGet:
+          path: /
+          port: 80
+        initialDelaySeconds: 5
+        periodSeconds: 5
