@@ -1,0 +1,35 @@
+## 🔹 Jenkins Pipeline — Email Notifications
+## you will learn how to send email notification on failure or success.
+
+pipeline {
+    agent any
+    environment {
+        INSTITUTE_NAME = "Pathnex"
+    }
+    stages {
+        stage('Checkout') {
+            steps {
+              git url: 'https://github.com/Pathnex/sample-java-app.git'
+            }
+        }
+        stage('Build') {
+            steps {
+              sh 'mvn clean package'
+            }
+        }
+  }
+ post {
+
+        success {
+            mail to: 'team@pathnex.com',
+                 subject: "Success: Build #${env.BUILD_NUMBER}",
+                 body: "Build completed successfully for ${env.INSTITUTE_NAME}"
+        }
+
+        failure {
+            mail to: 'team@pathnex.com',
+                 subject: "Failure: Build #${env.BUILD_NUMBER}",
+                 body: "Build failed for ${env.INSTITUTE_NAME}"
+        }
+    }
+}

@@ -1,0 +1,17 @@
+## 🔹 GitLab CI — Artifacts
+## you will learn how to store artifacts in GitLab CI
+
+stages:
+  - build
+
+build:
+  stage: build
+  image: maven:3.8.1-jdk-17
+  script:
+    - git clone 'https://github.com/pathnex/sample-java-app.git'
+    - cd sample-java-app
+    - mvn clean package
+  artifacts:
+    paths:
+      - target/*.jar
+      expire_in: 1 week
