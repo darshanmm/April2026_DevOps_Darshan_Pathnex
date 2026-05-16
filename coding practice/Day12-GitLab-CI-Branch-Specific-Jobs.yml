@@ -1,0 +1,21 @@
+## 🔹 GitLab CI — Branch Specific Jobs
+## You will learn how to run jobs for specific branches in GitLab CI
+
+stages:
+  - build
+
+build-main:
+  stage: build
+  image: maven:3.8.1-jdk-17
+  script:
+    - mvn clean compile
+  only:
+    - main
+
+build-dev:
+  stage: build
+  image: maven:3.8.1-jdk-17
+  script:
+    - mvn clean compile
+  only:
+    - dev
