@@ -1,0 +1,22 @@
+## 🔹 Jenkins Pipeline — Multi-branch
+## You will learn how to handle multiple branches in jenkins pipelines
+
+pipeline {
+agent any
+environment {
+INSTITUTE_NAME = "Pathnex"
+}
+stages {
+stage('Checkout') {
+steps {
+checkout scm
+}
+}
+}
+stage('Build') {
+steps {
+sh 'mvn clean compile'
+}
+}
+}
+}

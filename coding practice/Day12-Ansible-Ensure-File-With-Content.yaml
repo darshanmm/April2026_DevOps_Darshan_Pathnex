@@ -1,0 +1,13 @@
+## 🔹 Ansible — Ensure File With Content
+---
+- name: Create config file for pathnex
+  hosts: all
+  become: yes
+
+  tasks:
+    - name: Write content to the file
+      copy:
+        dest: /etc/pathnex.conf
+        content: |
+          Welcome to Pathnex devops training
+          Today is day 12
